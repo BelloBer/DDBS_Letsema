@@ -1,5 +1,5 @@
 # DDBS_Letsema
-DB_six distributed database systems project
+DB_six's Letsema Loans distributed database systems project
 
 # Letsema: Distributed Microfinance Loan Management System
 
@@ -142,6 +142,4 @@ For any questions or inquiries, please reach out to:
 - **Tebello Bernice**: [tebellolenyatsabernice@gmail.com](mailto:tebellolenyatsabernice@gmail.com)
 - **Project Repository**: [Letsema on GitHub](https://github.com/BelloBer/DDBS_Letsema)
 
-- 
-# DDBS_Letsema
-# DDBS_Letsema
+  
