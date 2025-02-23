@@ -1,16 +1,26 @@
-//src/App.js
-import './App.css';
+// src/App.js
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import GlobalStyles from "./styles/GlobalStyles";
+import Sidebar from "./components/Sidebar";
+import Navbar from "./components/Navbar";
+import Dashboard from "./components/Dashboard";
+import Borrowers from "./pages/Borrowers";
+import Loans from "./pages/Loans";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>PAGE TEMPLATE ==IF YOU SEE THIS BE GLAD== </h1>
-        
-         
-      </header>
-    </div>
+    <Router>
+      <GlobalStyles />
+      <Sidebar />
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Dashboard />} />
+        <Route path="/borrowers" element={<Borrowers />} />
+        <Route path="/loans" element={<Loans />} />
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;
