@@ -2,6 +2,12 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import GlobalStyles from "./styles/GlobalStyles";
+
+import { AuthProvider } from "./context/AuthContext";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+
+
 import Sidebar from "./components/Sidebar";
 import Navbar from "./components/Navbar";
 import Dashboard from "./components/Dashboard";
@@ -10,16 +16,22 @@ import Loans from "./pages/Loans";
 
 const App = () => {
   return (
-    <Router>
-      <GlobalStyles />
-      <Sidebar />
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Dashboard />} />
-        <Route path="/borrowers" element={<Borrowers />} />
-        <Route path="/loans" element={<Loans />} />
-      </Routes>
-    </Router>
+    <AuthProvider>
+      <Router>
+        <GlobalStyles />
+        <Navbar />
+        <Sidebar />
+        <Routes>
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+          <Route path="/" element={<Dashboard />} />
+          <Route path="/borrowers" element={<Borrowers />} />
+          <Route path="/loans" element={<Loans />} />
+          
+        </Routes>
+      </Router>
+    </AuthProvider>    
+    
   );
 };
 
